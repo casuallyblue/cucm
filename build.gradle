@@ -6,7 +6,7 @@ plugins {
 group 'com.github.casually-blue'
 version '1.0'
 
-ext.cxfVersion = "3.1.6"
+ext.cxfVersion = "3.4.4"
 
 repositories {
     mavenCentral()
@@ -37,10 +37,11 @@ task wsdl2java(type: JavaExec) {
 }
 
 publishing {
+
     repositories {
         maven {
-            name = "com.cisco.cucm"
-            url = "https://maven.pkg.github.com/casually-blue/com.cisco.cucm"
+            name = "com.github.casually-blue.cucm"
+            url = "https://maven.pkg.github.com/casually-blue/com.github.casually-blue.cucm"
             credentials {
                 username= project.findProperty("gpr.user")
                 password= project.findProperty("gpr.key")
