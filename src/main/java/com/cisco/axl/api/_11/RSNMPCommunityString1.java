@@ -1,0 +1,89 @@
+
+package com.cisco.axl.api._11;
+
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
+
+
+/**
+ * <p>Java class for RSNMPCommunityString1 complex type.
+ * 
+ * <p>The following schema fragment specifies the expected content contained within this class.
+ * 
+ * <pre>
+ * &lt;complexType name="RSNMPCommunityString1"&gt;
+ *   &lt;complexContent&gt;
+ *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+ *       &lt;sequence minOccurs="0"&gt;
+ *         &lt;element name="accessPrivilege" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/&gt;
+ *         &lt;element name="ArrayOfHosts" type="{http://www.cisco.com/AXL/API/11.5}RArrayOfHosts"/&gt;
+ *       &lt;/sequence&gt;
+ *     &lt;/restriction&gt;
+ *   &lt;/complexContent&gt;
+ * &lt;/complexType&gt;
+ * </pre>
+ * 
+ * 
+ */
+@XmlAccessorType(XmlAccessType.FIELD)
+@XmlType(name = "RSNMPCommunityString1", propOrder = {
+    "accessPrivilege",
+    "arrayOfHosts"
+})
+public class RSNMPCommunityString1 {
+
+    protected String accessPrivilege;
+    @XmlElement(name = "ArrayOfHosts")
+    protected RArrayOfHosts arrayOfHosts;
+
+    /**
+     * Gets the value of the accessPrivilege property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
+     */
+    public String getAccessPrivilege() {
+        return accessPrivilege;
+    }
+
+    /**
+     * Sets the value of the accessPrivilege property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
+     */
+    public void setAccessPrivilege(String value) {
+        this.accessPrivilege = value;
+    }
+
+    /**
+     * Gets the value of the arrayOfHosts property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link RArrayOfHosts }
+     *     
+     */
+    public RArrayOfHosts getArrayOfHosts() {
+        return arrayOfHosts;
+    }
+
+    /**
+     * Sets the value of the arrayOfHosts property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link RArrayOfHosts }
+     *     
+     */
+    public void setArrayOfHosts(RArrayOfHosts value) {
+        this.arrayOfHosts = value;
+    }
+
+}
