@@ -23622,7 +23622,7 @@
 
 	<service name="AXLAPIService">
 		<port binding="s0:AXLAPIBinding" name="AXLPort">
-			<soap:address location="https://CDACUCMPUB.coramdeo.local:8443/axl/"/>
+			<soap:address location="https://ENDPOINT:8443/axl/"/>
 		</port>
 	</service>
 </definitions>

@@ -5,7 +5,7 @@ plugins {
 }
 
 group 'com.github.casually-blue'
-version '1.4'
+version '1.5'
 
 
 repositories {
@@ -13,7 +13,7 @@ repositories {
 }
 
 dependencies {
-    implementation 'org.apache.cxf:cxf:3.1.6'
+    implementation 'org.apache.cxf:cxf:3.4.4'
     implementation 'org.apache.cxf:cxf-rt-frontend-jaxrs:3.4.4'
 }
 
