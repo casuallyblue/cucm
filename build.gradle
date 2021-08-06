@@ -1,39 +1,27 @@
 plugins {
     id 'java-library'
+    id "com.github.bjornvester.wsdl2java" version "1.2"
     id 'maven-publish'
 }
 
 group 'com.github.casually-blue'
-version '1.0'
+version '1.4'
 
-ext.cxfVersion = "3.4.4"
 
 repositories {
     mavenCentral()
 }
 
-configurations {
-    wsdl2java
-}
-
 dependencies {
-    wsdl2java("org.apache.cxf:cxf-tools-wsdlto-core:${cxfVersion}")
-    wsdl2java("org.apache.cxf:cxf-tools-wsdlto-frontend-jaxws:${cxfVersion}")
-    wsdl2java("org.apache.cxf:cxf-tools-wsdlto-databinding-jaxb:${cxfVersion}")
+    implementation 'org.apache.cxf:cxf:3.1.6'
+    implementation 'org.apache.cxf:cxf-rt-frontend-jaxrs:3.4.4'
 }
 
-task wsdl2java(type: JavaExec) {
-    main = "org.apache.cxf.tools.wsdlto.WSDLToJava"
-    classpath = configurations.wsdl2java
-    // Uncomment to add JVM arguments if necessary (e.g. for cert-based security)
-    //jvmArgs = [
-    //    "-Djavax.net.ssl.keyStore=${keystorePath}",
-    //    "-Djavax.net.ssl.keyStorePassword=${keystorePassword}"
-    //]
-    args = [
-            "-d", "src/main/java",
-            "src/main/resources/AXLAPI.wsdl"
-    ]
+wsdl2java{
+    cxfVersion = "3.4.4"
+
+    generatedSourceDir = layout.projectDirectory.dir("src/main/java/")
+    packageName = "com.github.casuallyblue.cucm"
 }
 
 publishing {
