@@ -1,5 +1,5 @@
 # Cisco Unified Communications Manager AXL Bindings Library
-This is a wsdl2java generated bindings to the CUCM interface and shouldn't require any extra dependencies to work correctly
+This is a wsdl2java generated bindings library for the CUCM interface and shouldn't require any extra dependencies to work correctly
 
 
 ## Installation Instructions
