@@ -6,7 +6,7 @@ plugins {
 }
 
 group = "io.github.casually-blue"
-version = "1.5"
+version = "1.6"
 
 
 repositories {
@@ -22,7 +22,7 @@ wsdl2java{
     cxfVersion.set("3.4.4")
 
     generatedSourceDir.set(layout.projectDirectory.dir("src/main/java/"))
-    packageName.set("com.github.casuallyblue.cucm")
+    packageName.set("io.github.casuallyblue.cucm")
 }
 
 java {
@@ -56,9 +56,10 @@ publishing {
             pom {
 
                 groupId = "io.github.casually-blue"
+                artifactId = "cucm"
                 name.set("cucm")
-                description.set("Example Project to learn how to deploy to OSSRH")
-                url.set("https://github.com/casually-blue/com.github.casually-blue.cucm")
+                description.set("CUCM java bindings with apache cxf")
+                url.set("https://github.com/casually-blue/cucm")
 
                 from(components["java"])
 
@@ -69,9 +70,9 @@ publishing {
                     }
                 }
                 scm {
-                    connection.set("scm:git:git@github.com:casually-blue/com.github.casually-blue.cucm.git")
-                    developerConnection.set("scm:git:git@github.com:casually-blue/com.github.casually-blue.cucm.git")
-                    url.set("https://casually-blue/com.github.casually-blue.cucm.git")
+                    connection.set("scm:git:git@github.com:casually-blue/cucm.git")
+                    developerConnection.set("scm:git:git@github.com:casually-blue/cucm.git")
+                    url.set("https://casually-blue/cucm")
                 }
 
                 developers {
