@@ -49,7 +49,7 @@ fun getClient(): AXLPort {
 Replace the `{}` elements with your server's information.
 You can then, for example, list phones on the server like this:
 ```kotlin
-fun getPhones(client: AXLPort): List<LPhone!>! {
+fun getPhones(client: AXLPort): List<LPhone> {
     // Create a new request
     val request = ListPhoneReq().let { req ->
             // Set the search criteria to get all phones with a name
