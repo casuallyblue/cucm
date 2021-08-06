@@ -8,21 +8,13 @@ To use, just declare as a dependency in your project.
 Gradle Example
 ```kotlin
 repositories {
-    maven {
-        name = "Github Packages"
-        url = uri("https://maven.pkg.github.com/casually-blue/repos/")
-        credentials {
-            username = "{github username}"
-            password = "{github access token}"
-        }
-    }
+    mavenCentral()
 }
 
 dependencies {
-    implementation("com.github.casually-blue:cucm:{version}")
+    implementation("com.github.casually-blue:cucm:1.6")
 }
 ```
-Replace the `{}` values with your credentials and desired version
 
 ## Usage 
 To use the library just initialize a client object by requesting one from the service like this:
@@ -33,7 +25,7 @@ import java.xml.ws.BindingProvider
 fun getClient(): AXLPort {
     // Get a service reference
     val service = AXLAPIService()
-    // get the client (this is a default unconfigured clinet)
+    // get the client (this is a default un-configured client)
     val client = service.axlPort
   
     // Set the properties of the client
