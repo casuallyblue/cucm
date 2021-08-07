@@ -62,7 +62,7 @@ publishing {
                 url.set("https://github.com/casually-blue/cucm")
 
                 from(components["java"])
-
+                artifact(tasks.named("sourcesJar"))
                 licenses {
                     license {
                         name.set("GPL Version 3.0")
