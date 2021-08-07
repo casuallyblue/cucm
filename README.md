@@ -14,7 +14,7 @@ repositories {
 }
 
 dependencies {
-    implementation("com.github.casually-blue:cucm:1.6")
+    implementation("com.github.casually-blue:cucm-11:1.6")
 }
 ```
 
