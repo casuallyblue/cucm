@@ -1,4 +1,6 @@
 # Cisco Unified Communications Manager AXL Bindings Library
+![Maven Central](https://img.shields.io/maven-central/v/io.github.casually-blue/cucm-11)
+
 This is a wsdl2java generated bindings library for the CUCM interface and shouldn't require any extra dependencies to work correctly. It should work both in kotlin and java, although I haven't tested it in java
 
 
@@ -12,7 +14,8 @@ repositories {
 }
 
 dependencies {
-    implementation("com.github.casually-blue:cucm:1.6")
+    implementation("com.github.casually-blue:cucm-11:1.6")
+    implementation("com.sun.xml.ws:jaxws-rt:2.3.3")
 }
 ```
 
