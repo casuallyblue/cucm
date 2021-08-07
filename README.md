@@ -22,7 +22,7 @@ dependencies {
 ## Usage 
 To use the library just initialize a client object by requesting one from the service like this:
 ```kotlin
-import com.github.casuallyblue.cucm.*
+import io.github.casuallyblue.cucm.*
 import java.xml.ws.BindingProvider
 
 fun getClient(): AXLPort {
