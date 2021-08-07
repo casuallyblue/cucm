@@ -15,6 +15,7 @@ repositories {
 
 dependencies {
     implementation("com.github.casually-blue:cucm-11:1.6")
+    implementation("com.sun.xml.ws:jaxws-rt:2.3.3")
 }
 ```
 
