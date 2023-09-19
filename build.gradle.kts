@@ -5,7 +5,7 @@ plugins {
     id("signing")
 }
 
-group = "io.github.casually-blue"
+group = "dev.casuallyblue.cucm"
 version = "1.6"
 
 
@@ -22,7 +22,7 @@ wsdl2java{
     cxfVersion.set("3.4.4")
 
     generatedSourceDir.set(layout.projectDirectory.dir("src/main/java/"))
-    packageName.set("io.github.casuallyblue.cucm")
+    packageName.set("dev.casuallyblue.cucm")
 }
 
 java {
@@ -55,7 +55,7 @@ publishing {
         create<MavenPublication>("mavenJava") {
             pom {
 
-                groupId = "io.github.casually-blue"
+                groupId = "dev.casuallyblue.cucm"
                 artifactId = "cucm"
                 name.set("cucm")
                 description.set("CUCM java bindings with apache cxf")
